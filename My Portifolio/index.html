@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eloisa — Portfólio</title>
+<meta name="description" content="Portfólio de Eloisa, criadora de conteúdo — rotina, lifestyle e beleza contados de um jeito leve e autêntico.">
+
+<!-- Favicon — borboleta do site -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<!-- Google Fonts: Fraunces (display, com itálico elegante) + Manrope (texto/interface) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ PAPEL DE PAREDE DINÂMICO ============ -->
+<div class="wallpaper" aria-hidden="true"></div>
+<div class="wallpaper-texture" aria-hidden="true"></div>
+<div class="sparkles" id="sparkles" aria-hidden="true"></div>
+
+<!-- ============ BORBOLETA — companheira flutuante ============ -->
+<div class="butterfly" id="butterfly" aria-hidden="true">
+  <svg viewBox="0 0 100 84" width="100%" height="100%">
+    <g class="wing wing--left">
+      <path d="M50 42 C 28 4, -4 2, 3 34 C 7 56, 30 58, 50 44 Z" fill="#FFFFFF" stroke="#C6A15B" stroke-width="1"/>
+      <path d="M50 46 C 32 32, 12 42, 16 58 C 19 70, 38 68, 50 50 Z" fill="#FCF2EA" stroke="#C6A15B" stroke-width="0.7" opacity="0.95"/>
+    </g>
+    <g class="wing wing--right">
+      <path d="M50 42 C 72 4, 104 2, 97 34 C 93 56, 70 58, 50 44 Z" fill="#FFFFFF" stroke="#C6A15B" stroke-width="1"/>
+      <path d="M50 46 C 68 32, 88 42, 84 58 C 81 70, 62 68, 50 50 Z" fill="#FCF2EA" stroke="#C6A15B" stroke-width="0.7" opacity="0.95"/>
+    </g>
+    <ellipse cx="50" cy="44" rx="2.2" ry="15" fill="#4A3438"/>
+    <circle cx="50" cy="27" r="2.2" fill="#4A3438"/>
+    <path d="M50 27 C 46 21, 43 19, 41 15" stroke="#4A3438" stroke-width="0.9" fill="none" stroke-linecap="round"/>
+    <path d="M50 27 C 54 21, 57 19, 59 15" stroke="#4A3438" stroke-width="0.9" fill="none" stroke-linecap="round"/>
+  </svg>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <span class="nav__mark">Eloisa</span>
+  <nav class="nav__links">
+    <a href="#sobre">Sobre</a>
+    <a href="#conteudo">Conteúdo</a>
+    <a href="#fotos">Fotos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+
+  <div class="hero__portrait reveal">
+    <img src="eloisa-foto-capa.png" alt="Foto de Eloisa" loading="eager">
+  </div>
+
+  <p class="eyebrow reveal">Portfólio</p>
+  <h1 class="hero__title reveal float-text">Eloisa</h1>
+
+  <p class="hero__tagline reveal">
+    Conteúdo, rotina e lifestyle compartilhados de um jeito leve, autêntico e criativo.
+  </p>
+
+  <!--
+    ██ EDITAR AQUI — LINK DO PORTFÓLIO ██
+    Se usar um link externo (Google Drive, Canva, etc.), NÃO adicione o atributo "download" —
+    ele só funciona com arquivos locais, na mesma pasta do site.
+  -->
+  <a
+    href="https://drive.google.com/file/d/1HOfV4WAXOyeJSf_gyC-RzxfZY5Q5sCSN/view?usp=drive_link"
+    class="btn-cta reveal"
+    id="portfolio-link"
+    target="_blank"
+    rel="noopener"
+  >
+    <span>Ver meu portfólio</span>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 4V16M12 16L7 11M12 16L17 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M4 19H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </a>
+
+  <div class="hero__scroll" aria-hidden="true">
+    <span></span>
+  </div>
+</section>
+
+<!-- ============ SOBRE MIM ============ -->
+<section class="section" id="sobre">
+  <div class="section__inner section__inner--narrow">
+    <p class="eyebrow reveal">Sobre mim</p>
+    <h2 class="section__title reveal">
+      Um pouco da <em>minha essência</em>
+      <svg class="squiggle" viewBox="0 0 220 20" aria-hidden="true">
+        <path d="M2 14C40 2 80 2 110 10C140 18 180 18 218 6" />
+      </svg>
+    </h2>
+    <p class="section__text reveal">
+      Sou a Eloisa — crio conteúdo pensando em quem, assim como eu, gosta de cuidar de si com carinho e simplicidade.
+      Compartilho minha rotina, minhas descobertas de beleza e pedacinhos do meu dia a dia de um jeito natural,
+      sem filtros exagerados e sem fórmulas prontas. Aqui você encontra conteúdo genuíno, feito para inspirar e
+      criar conexão de verdade.
+    </p>
+  </div>
+</section>
+
+<!-- ============ MEU CONTEÚDO ============ -->
+<section class="section section--tint" id="conteudo">
+  <div class="section__inner">
+    <p class="eyebrow reveal">O que eu crio</p>
+    <h2 class="section__title reveal">
+      Meu <em>conteúdo</em>
+      <svg class="squiggle" viewBox="0 0 220 20" aria-hidden="true">
+        <path d="M2 14C40 2 80 2 110 10C140 18 180 18 218 6" />
+      </svg>
+    </h2>
+
+    <div class="cards">
+      <div class="card reveal">
+        <span class="card__icon">✨</span>
+        <h3>Lifestyle</h3>
+        <p>Momentos reais do meu dia a dia, inspirações e tudo que faz parte da minha rotina fora das câmeras.</p>
+      </div>
+
+      <div class="card reveal">
+        <span class="card__icon">🎀</span>
+        <h3>Beleza</h3>
+        <p>Cuidados, produtos e rituais de beleza que fazem parte da minha rotina, contados com leveza.</p>
+      </div>
+
+      <div class="card reveal">
+        <span class="card__icon">📹</span>
+        <h3>Rotina</h3>
+        <p>Um pouco de "get ready with me", tarefas do dia e os pequenos rituais que organizam minha vida.</p>
+      </div>
+
+      <div class="card reveal">
+        <span class="card__icon">💕</span>
+        <h3>Conteúdo pessoal</h3>
+        <p>Histórias, pensamentos e vivências que aproximam quem me acompanha da minha essência.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOTOS ============ -->
+<section class="section" id="fotos">
+  <div class="section__inner section__inner--narrow">
+    <p class="eyebrow reveal">Exemplo</p>
+    <h2 class="section__title reveal">
+      Pequeno exemplo de como eu <em>mostraria seu produto</em>
+      <svg class="squiggle" viewBox="0 0 220 20" aria-hidden="true">
+        <path d="M2 14C40 2 80 2 110 10C140 18 180 18 218 6" />
+      </svg>
+    </h2>
+  </div>
+
+  <div class="tablet-showcase">
+    <div class="tablet reveal">
+      <span class="tablet__camera" aria-hidden="true"></span>
+      <div class="tablet__screen">
+        <div class="tablet__video" id="tablet-video-wrap">
+          <video
+            id="tablet-video"
+            src="exemplo-video.mp4"
+            playsinline
+            preload="metadata"
+            loop
+          ></video>
+          <span class="tablet__play" id="tablet-play" aria-hidden="true">▶</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="phone-gallery__caption reveal">Exemplo de vídeo no portfólio acima</p>
+
+  <p class="video-note reveal">
+    Este exemplo foi roteirizado para a categoria de <strong>cosméticos</strong> — mas o roteiro e o
+    formato podem ser adaptados para qualquer segmento ou objetivo e produto que a sua marca preferir.
+  </p>
+</section>
+
+<!-- ============ CONTATO / REDES ============ -->
+<section class="section section--dark" id="contato">
+  <div class="section__inner section__inner--narrow">
+    <p class="eyebrow eyebrow--light reveal">Vamos conversar?</p>
+    <h2 class="section__title section__title--light reveal">
+      Vamos criar algo <em>juntas?</em>
+    </h2>
+
+    <p class="section__text section__text--light reveal">
+      Estou sempre aberta a novas parcerias e ideias. Me encontra por aqui:
+    </p>
+
+    <div class="socials reveal">
+      <!-- ██ EDITAR AQUI — LINK DO INSTAGRAM ██ -->
+      <a href="https://instagram.com/eloisa_silvacl" target="_blank" rel="noopener" class="social" aria-label="Instagram de Eloisa">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5.5" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="17.1" cy="6.9" r="1.1" fill="currentColor"/>
+        </svg>
+        Instagram
+      </a>
+
+      <!-- ██ EDITAR AQUI — LINK DO TIKTOK ██ -->
+      <a href="https://tiktok.com/@eloisa_silvacl" target="_blank" rel="noopener" class="social" aria-label="TikTok de Eloisa">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M16.5 3c.4 2.2 2 3.9 4.2 4.2v3.1c-1.5 0-2.9-.5-4.2-1.3v6.4a5.9 5.9 0 1 1-5.9-5.9c.3 0 .6 0 .9.1v3.2a2.7 2.7 0 1 0 1.9 2.6V3h3.1z" stroke="currentColor" stroke-width="0.3" fill="currentColor"/>
+        </svg>
+        TikTok
+      </a>
+    </div>
+
+    <p class="handle reveal">@eloisa_silvacl</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Eloisa — Todos os direitos reservados</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
