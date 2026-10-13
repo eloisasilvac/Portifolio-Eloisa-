@@ -277,3 +277,29 @@ if (parceria) document.querySelectorAll("[data-partnership]").forEach(link => {
   link.href = parceria;
   link.removeAttribute("target");
 });
+
+// A borboleta acompanha a rolagem, sem cobrir a área central dos links.
+const butterfly = document.getElementById("butterfly");
+if (butterfly) {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let ticking = false;
+  const updateButterfly = () => {
+    const availableScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = availableScroll > 0 ? Math.max(0, Math.min(1, window.scrollY / availableScroll)) : 0;
+    butterfly.style.top = (15 + progress * 65) + "vh";
+    ticking = false;
+  };
+  const scheduleButterfly = () => {
+    if (!ticking && !reducedMotion.matches) {
+      ticking = true;
+      window.requestAnimationFrame(updateButterfly);
+    }
+  };
+  window.addEventListener("scroll", scheduleButterfly, { passive: true });
+  window.addEventListener("resize", scheduleButterfly);
+  reducedMotion.addEventListener("change", () => {
+    if (reducedMotion.matches) butterfly.style.top = "15vh";
+    else scheduleButterfly();
+  });
+  if (!reducedMotion.matches) updateButterfly();
+}

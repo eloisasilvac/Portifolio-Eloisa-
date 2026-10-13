@@ -32,3 +32,16 @@ a:focus-visible { outline: 3px solid #bd5077; outline-offset: 5px; }
   .product-category > h3 { font-size: .85rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .product-card { transition: none; } }
+
+.intro-label { color: var(--accent); font-size: .65rem; font-weight: 700; letter-spacing: .12em; margin: 0 0 12px; }
+.intro-title { font-size: clamp(1.35rem, 5vw, 1.8rem); line-height: 1.25; margin: 0 0 14px; }
+.intro-copy { max-width: 48ch; margin: 0 auto 28px; color: #6f4a5c; font-size: .88rem; line-height: 1.7; }
+.butterfly { position: fixed; left: 5px; top: 15vh; width: 40px; z-index: 10; pointer-events: none; filter: drop-shadow(0 4px 5px #492b3a40); transition: top .65s ease-out; }
+.butterfly svg { display: block; overflow: visible; animation: butterfly-bob 3s ease-in-out infinite; }
+.wing { transform-box: fill-box; transform-origin: center; animation: butterfly-flap .65s ease-in-out infinite alternate; }
+.wing--right { animation-delay: .04s; }
+@keyframes butterfly-flap { to { transform: scaleX(.4); } }
+@keyframes butterfly-bob { 50% { transform: translateY(-8px) rotate(6deg); } }
+@media (min-width: 800px) { .butterfly { left: calc(50% - 400px); width: 48px; } }
+@media (max-width: 600px) { .butterfly { left: 0; width: 26px; } }
+@media (prefers-reduced-motion: reduce) { .butterfly { transition: none; } .butterfly svg, .wing { animation: none; } }
