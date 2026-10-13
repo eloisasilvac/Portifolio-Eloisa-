@@ -45,3 +45,18 @@ a:focus-visible { outline: 3px solid #bd5077; outline-offset: 5px; }
 @media (min-width: 800px) { .butterfly { left: calc(50% - 400px); width: 48px; } }
 @media (max-width: 600px) { .butterfly { left: 0; width: 26px; } }
 @media (prefers-reduced-motion: reduce) { .butterfly { transition: none; } .butterfly svg, .wing { animation: none; } }
+
+
+.products-intro { text-align: center; font-size: 1.1rem; line-height: 1.5; color: var(--accent); margin: 12px 0 30px; font-weight: 600; }
+/* A mesma foto é enquadrada em cada lateral para manter Eloisa visível. */
+@media (min-width: 800px) {
+  .photo-background { inset: 0; background: #352b32; filter: none; }
+  .photo-background::before, .photo-background::after {
+    content: ''; position: absolute; top: -16px; bottom: -16px;
+    width: calc((100% - 720px) / 2 + 32px);
+    background: linear-gradient(#38212c26, #38212c26), url('fundo-eloisa.jpg') 55% center / cover no-repeat;
+    filter: blur(8px);
+  }
+  .photo-background::before { left: -16px; }
+  .photo-background::after { right: -16px; }
+}

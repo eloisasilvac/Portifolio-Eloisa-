@@ -20,7 +20,7 @@ const linksEloisa = {
     {
       "id": "cacheados",
       "titulo": "Cabelos cacheados",
-      "descricao": "Estes são apenas alguns produtos para cabelos cacheados. Há outras opções na loja; explore a linha completa pelo produto que mais combina com você."
+      "descricao": "Conheça a linha Cacho Perfeito."
     },
     {
       "id": "loiros",
@@ -234,7 +234,7 @@ if (catalogo) {
     section.setAttribute("aria-labelledby", heading.id);
     const description = document.createElement("p");
     description.className = "product-category__description";
-    description.textContent = categoria.id === "cacheados" ? "Estes são apenas alguns produtos para cabelos cacheados. Há outras opções na loja." : "";
+    description.textContent = "";
     const grid = document.createElement("div");
     grid.className = "product-grid";
     linksEloisa.compras.filter(item => item.categoria === categoria.id).forEach(item => {
