@@ -234,7 +234,7 @@ if (catalogo) {
     section.setAttribute("aria-labelledby", heading.id);
     const description = document.createElement("p");
     description.className = "product-category__description";
-    description.textContent = categoria.descricao;
+    description.textContent = categoria.id === "cacheados" ? "Estes são apenas alguns produtos para cabelos cacheados. Há outras opções na loja." : "";
     const grid = document.createElement("div");
     grid.className = "product-grid";
     linksEloisa.compras.filter(item => item.categoria === categoria.id).forEach(item => {
@@ -257,13 +257,12 @@ if (catalogo) {
       });
       const title = document.createElement("h4");
       title.textContent = item.titulo;
-      const action = document.createElement("span");
-      action.className = "product-card__action";
-      action.textContent = "Ver produto na Ybera ↗";
-      card.append(photo, title, action);
+      card.append(photo, title);
       grid.append(card);
     });
-    section.append(heading, description, grid);
+    section.append(heading);
+    if (description.textContent) section.append(description);
+    section.append(grid);
     catalogo.append(section);
     if (navegacao) {
       const link = document.createElement("a");
