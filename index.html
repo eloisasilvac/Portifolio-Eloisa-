@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eloisa — Portfólio</title>
+<title>Eloisa — Meus links e parcerias</title>
 <meta name="description" content="Portfólio de Eloisa, criadora de conteúdo — rotina, lifestyle e beleza contados de um jeito leve e autêntico.">
 <!-- Favicon — borboleta do site -->
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -44,6 +44,7 @@
 <header class="nav">
   <span class="nav__mark">Eloisa</span>
   <nav class="nav__links">
+    <a href="#compras">Compras</a>
     <a href="#sobre">Sobre</a>
     <a href="#conteudo">Conteúdo</a>
     <a href="#fotos">Fotos</a>
@@ -59,11 +60,11 @@
     <img src="eloisa-foto-capa.png" alt="Foto de Eloisa" loading="eager">
   </div>
 
-  <p class="eyebrow reveal">Portfólio</p>
+  <p class="eyebrow reveal">Lifestyle · Beleza · UGC</p>
   <h1 class="hero__title reveal float-text">Eloisa</h1>
 
   <p class="hero__tagline reveal">
-    Conteúdo, rotina e lifestyle compartilhados de um jeito leve, autêntico e criativo.
+    Meu universo em um só lugar: beleza, rotina e os achadinhos que quero compartilhar com você.
   </p>
 
   <!--
@@ -85,9 +86,25 @@
     </svg>
   </a>
 
+  <a class="partnership-link" data-partnership href="mailto:helloeloisasilva@gmail.com?subject=Parceria%20com%20Eloisa">Parcerias por e-mail <span aria-hidden="true">↗</span></a>
+  <a class="shopping-jump" href="#compras">Explore meus achadinhos <span aria-hidden="true">↓</span></a>
+
   <div class="hero__scroll" aria-hidden="true">
     <span></span>
   </div>
+</section>
+
+<main>
+<section class="shopping-section" id="compras" aria-labelledby="shopping-title">
+  <div class="shopping-heading">
+    <p class="eyebrow">Escolhidos com carinho</p>
+    <h2 class="section__title" id="shopping-title">Meus <em>achadinhos</em></h2>
+    <p>Uma seleção de cuidados para o seu cabelo, organizada para você encontrar o que procura.</p>
+  </div>
+  <p class="affiliate-note">Links de afiliada: posso receber uma comissão pelas compras feitas por estes links.</p>
+  <nav class="category-nav" id="shopping-categories" aria-label="Categorias de produtos"></nav>
+  <div id="shopping-links"></div>
+  <noscript><p class="shopping-heading">Ative o JavaScript para consultar os links de compras.</p></noscript>
 </section>
 
 <!-- ============ SOBRE MIM ============ -->
@@ -198,6 +215,7 @@
       Estou sempre aberta a novas parcerias e ideias. Me encontra por aqui:
     </p>
 
+    <a class="partnership-link partnership-link--light" data-partnership href="mailto:helloeloisasilva@gmail.com?subject=Parceria%20com%20Eloisa">helloeloisasilva@gmail.com <span aria-hidden="true">↗</span></a>
     <div class="socials reveal">
       <!-- ██ EDITAR AQUI — LINK DO INSTAGRAM ██ -->
       <a href="https://instagram.com/eloisasilvacl" target="_blank" rel="noopener" class="social" aria-label="Instagram de Eloisa">
@@ -222,10 +240,12 @@
   </div>
 </section>
 
+</main>
 <footer class="footer">
   <p>© <span id="year"></span> Eloisa — Todos os direitos reservados</p>
 </footer>
 
+<script src="links.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
